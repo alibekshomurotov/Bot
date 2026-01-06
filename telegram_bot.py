@@ -184,10 +184,15 @@ async def send_drivers_list_to_user(context, user_id):
     message += "💰 *To'lov qilganingiz uchun rahmat! (5,000 so'm)*\n\n"
     
     for i, driver in enumerate(active_drivers[:10], 1):
-        message += f"{i}. *{driver.get('first_name', \"Noma'lum\")}*\n"
-        message += f"   🚘 {driver.get('car_type', \"Mashina yo'q\")}\n"
-        message += f"   💰 {driver.get('price', \"Narx yo'q\")}\n"    
-        message += f"   📞 {driver.get('phone', \"Telefon yo'q\")}\n\n"
+        name = driver.get('first_name', "Noma'lum")
+        car = driver.get('car_type', "Mashina yo'q")
+        price = driver.get('price', "Narx yo'q")
+        phone = driver.get('phone', "Telefon yo'q")
+
+        message += f"{i}. *{name}*\n"
+        message += f"   🚘 {car}\n"
+        message += f"   💰 {price}\n"
+        message += f"   📞 {phone}\n\n"
 
     
     message += "📞 *Haydovchi bilan bog'laning va safar haqida kelishing*\n\n"
@@ -833,10 +838,16 @@ async def admin_users(update: Update, context: ContextTypes.DEFAULT_TYPE):
     
     for i, (user_id_str, data) in enumerate(list(user_data.items())[:10], 1):
         role = "🚗 Haydovchi" if data.get('role') == 'driver' else "🚶 Yo'lovchi"
-        text += f"{i}. {data.get('first_name', \"Noma'lum\")}\n"
+        
+        name = data.get('first_name', "Noma'lum")
+        text += f"{i}. {name}\n"
+
         text += f"   🆔 {user_id_str}\n"
         text += f"   {role}\n"
-        text += f"   📞 {data.get('phone', \"Yo'q\")}\n"
+        
+        phone = data.get('phone', "Yo'q")
+        text += f"   📞 {phone}\n"
+
         text += "   ―" * 8 + "\n"
     
     if len(user_data) > 10:
@@ -879,3 +890,4 @@ def main():
 if __name__ == '__main__':
 
     main()
+
