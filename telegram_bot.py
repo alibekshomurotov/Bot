@@ -212,7 +212,7 @@ async def notify_admin_about_payment(context, user_id, payment_id, screenshot_id
             ]
         ]
         
-        if screenshot_id:3
+        if screenshot_id:
             await context.bot.send_photo(
                 chat_id=ADMIN_ID,
                 photo=screenshot_id,
@@ -890,4 +890,5 @@ def main():
 if __name__ == '__main__':
 
     main()
+
 
