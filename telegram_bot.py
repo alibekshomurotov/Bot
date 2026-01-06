@@ -15,7 +15,7 @@ logging.basicConfig(
 )
 
 # ⚠️ BU YERNI O'ZGARTIRING!
-BOT_TOKEN = "8289853358:AAFPpHqntZf6gUDLYBzD5snh66kfTdyQ2FM"
+BOT_TOKEN = os.getenv("BOT_TOKEN")
 CHANNEL_ID = "-1003236563110"
 ADMIN_ID = 8014950410
 
@@ -876,4 +876,5 @@ def main():
     app.run_polling(allowed_updates=Update.ALL_TYPES)
 
 if __name__ == '__main__':
+
     main()
