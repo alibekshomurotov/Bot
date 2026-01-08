@@ -143,7 +143,7 @@ def home():
             <p>• ⏱️ Real-time notifications</p>
         </div>
         
-        <a href="https://t.me/ZamonaviyMebelBot" class="bot-link" target="_blank">
+        <a href="https://t.me/XorazmToshkentBot" class="bot-link" target="_blank">
             🤖 Start Bot in Telegram
         </a>
         
@@ -1870,6 +1870,7 @@ if __name__ == '__main__':
     
     # 2. Asosiy threadda Telegram botni ishga tushiramiz
     run_telegram_bot()
+
 
 
 
