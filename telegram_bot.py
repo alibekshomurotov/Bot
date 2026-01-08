@@ -182,7 +182,7 @@ def run_flask_server():
     flask_app.run(host='0.0.0.0', port=port, debug=False, use_reloader=False)
 
 # Bot token va sozlamalar
-BOT_TOKEN = "8289853358:AAEJsNKO3_v_IPbXjTx5VrYeddn5a426aFg"
+BOT_TOKEN = "8401635301:AAGCvjlCB-ac1eDhr2hRXw9fcnRSU8U3b2s"
 CHANNEL_ID = "-1003236563110"
 ADMIN_ID = 8014950410  # Bu int bo'lishi kerak
 
@@ -1870,5 +1870,6 @@ if __name__ == '__main__':
     
     # 2. Asosiy threadda Telegram botni ishga tushiramiz
     run_telegram_bot()
+
 
 
